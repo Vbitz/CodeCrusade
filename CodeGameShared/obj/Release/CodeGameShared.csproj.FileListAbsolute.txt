@@ -6,3 +6,8 @@ C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameShared\ob
 C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameShared\obj\Release\CodeGameShared.pdb
 C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\Bin\CodeGameShared.dll
 C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\Bin\CodeGameShared.pdb
+C:\Users\Joshua\dev\org\CodeCrusade\Bin\CodeGameShared.dll
+C:\Users\Joshua\dev\org\CodeCrusade\Bin\CodeGameShared.pdb
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGameShared\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGameShared\obj\Release\CodeGameShared.dll
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGameShared\obj\Release\CodeGameShared.pdb

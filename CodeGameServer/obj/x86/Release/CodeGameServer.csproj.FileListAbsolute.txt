@@ -8,3 +8,8 @@ C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\ob
 C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\obj\x86\Release\CodeGameServer.pdb
 C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\Bin\CodeGameServer.exe
 C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\Bin\CodeGameServer.pdb
+C:\Users\Joshua\dev\org\CodeCrusade\Bin\CodeGameServer.exe
+C:\Users\Joshua\dev\org\CodeCrusade\Bin\CodeGameServer.pdb
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGameServer\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGameServer\obj\x86\Release\CodeGameServer.exe
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGameServer\obj\x86\Release\CodeGameServer.pdb

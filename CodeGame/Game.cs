@@ -34,7 +34,6 @@ namespace CodeGame
         public Lua lua = new Lua();
         public NetClient client;
         Thread netThread = new Thread(new ParameterizedThreadStart(NetLoop));
-        public Stack<string> netMessages = new Stack<string>();
         public List<IDrawable> Drawables = new List<IDrawable>();
         private List<IDrawable> DrawableCue = new List<IDrawable>();
         public Drawables.Console TConsole = new Drawables.Console();
@@ -58,10 +57,6 @@ namespace CodeGame
             try
             {
                 Game game = (Game)args;
-                while (game.client.ServerConnection == null)
-                {
-                    Thread.Sleep(1000);
-                }
                 while (true)
                 {
                     while (game.client.MessageAvailable)
@@ -157,16 +152,39 @@ namespace CodeGame
             TCODConsole.setCustomFont("arial10x10.png", (int)TCODFontFlags.LayoutTCOD | (int)TCODFontFlags.Grayscale);
             TCODConsole.initRoot(80, 60, "CodeCrusade");
             TCODSystem.setFps(60);
-            Thread.Sleep(10);
+            //Thread.Sleep(10);
             if (File.Exists("client_init.lua"))
             {
                 lua.DoFile("client_init.lua");
             }
+            MainLoop();
+            netThread.Abort();
+            client.Shutdown("Client Closing");
+        }
+
+        private void MainLoop()
+        {
             while (!TCODConsole.isWindowClosed())
             {
                 TCODConsole.flush();
-                TCODKey key = TCODConsole.checkForKeypress();
-                TCODConsole.blit(GameSpace, 0, 0, 80, 60, TCODConsole.root, 0, 0);
+                Draw();
+                Logic();
+                Thread.Sleep(0);
+            }
+        }
+
+        private static void Logic()
+        {
+            float lastTime = TCODSystem.getLastFrameLength();
+            Functions.Timer.Update(lastTime);
+        }
+
+        private void Draw()
+        {
+            TCODKey key = TCODConsole.checkForKeypress();
+            TCODConsole.blit(GameSpace, 0, 0, 80, 60, TCODConsole.root, 0, 0);
+            if (Drawables.Count > 0)
+            {
                 foreach (IDrawable item in Drawables)
                 {
                     if (item.IsActive())
@@ -175,22 +193,17 @@ namespace CodeGame
                         item.KeyPress(key);
                     }
                 }
-                if (DrawableCue.Count > 0)
-                {
-                    foreach (IDrawable item in DrawableCue)
-                    {
-                        Drawables.Add(item);
-                    }
-                    DrawableCue.Clear();
-                }
-                TConsole.Draw(TCODConsole.root);
-                TConsole.KeyPress(key);
-                float lastTime = TCODSystem.getLastFrameLength();
-                Functions.Timer.Update(lastTime);
-                Thread.Sleep(0);
             }
-            netThread.Abort();
-            client.Shutdown("Client Closing");
+            if (DrawableCue.Count > 0)
+            {
+                foreach (IDrawable item in DrawableCue)
+                {
+                    Drawables.Add(item);
+                }
+                DrawableCue.Clear();
+            }
+            TConsole.Draw(TCODConsole.root);
+            TConsole.KeyPress(key);
         }
 
         private void RegisterFunctions(Assembly program, string space)
