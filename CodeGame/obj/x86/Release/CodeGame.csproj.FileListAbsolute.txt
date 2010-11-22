@@ -1,0 +1,12 @@
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Release\CodeGame.exe
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Release\CodeGame.pdb
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Release\CodeGameShared.dll
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Release\LuaInterface.dll
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Release\Lidgren.Network.dll
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Release\lua51.dll
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Release\CodeGameShared.pdb
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\obj\x86\Release\CodeGame.exe
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\obj\x86\Release\CodeGame.pdb
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\Bin\CodeGame.exe
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\Bin\CodeGame.pdb

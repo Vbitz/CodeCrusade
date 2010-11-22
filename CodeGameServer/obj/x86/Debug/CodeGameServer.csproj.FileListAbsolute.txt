@@ -1,0 +1,8 @@
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\bin\Debug\CodeGameServer.exe
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\bin\Debug\CodeGameServer.pdb
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\bin\Debug\CodeGameShared.dll
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\bin\Debug\Lidgren.Network.dll
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\bin\Debug\CodeGameShared.pdb
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\obj\x86\Debug\CodeGameServer.exe
+C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGameServer\obj\x86\Debug\CodeGameServer.pdb
