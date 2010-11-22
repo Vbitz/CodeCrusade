@@ -96,7 +96,7 @@ namespace CodeGame.Drawables
 
         public void KeyPress(TCODKey key)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             if (key.KeyCode == TCODKeyCode.Char)
             {
                 if (key.Character != '`')

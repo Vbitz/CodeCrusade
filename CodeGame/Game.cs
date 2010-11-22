@@ -30,7 +30,7 @@ namespace CodeGame
 {
     class Game
     {
-        static Game Singilton;
+        static Game Singleton;
         public Lua lua = new Lua();
         public NetClient client;
         Thread netThread = new Thread(new ParameterizedThreadStart(NetLoop));
@@ -236,13 +236,13 @@ namespace CodeGame
             TConsole.WriteLine(line, col);
         }
 
-        public static Game GetSingilton()
+        public static Game GetSingleton()
         {
-            if (Singilton == null)
+            if (Singleton == null)
             {
-                Singilton = new Game();
+                Singleton = new Game();
             }
-            return Singilton;
+            return Singleton;
         }
     }
 }

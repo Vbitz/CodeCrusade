@@ -51,7 +51,7 @@ namespace CodeGame.Drawables
                 }
                 catch (Exception ex)
                 {
-                    Game.GetSingilton().TConsole.WriteLine(ex.Message, TCODColor.red);
+                    Game.GetSingleton().TConsole.WriteLine(ex.Message, TCODColor.red);
                 }
             }
             TCODConsole.blit(Console, 0, 0, Console.getWidth(), Console.getHeight(), target, x, y);

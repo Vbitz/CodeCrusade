@@ -11,3 +11,10 @@ C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Debu
 C:\Users\Joshua\documents\visual studio 2010\Projects\CodeGame\CodeGame\bin\Debug\libtcod-net.dll
 C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\obj\x86\Debug\CodeGame.exe
 C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\obj\x86\Debug\CodeGame.pdb
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\bin\Debug\CodeGame.exe
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\bin\Debug\CodeGame.pdb
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\bin\Debug\CodeGameShared.dll
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\bin\Debug\libtcod-net.dll
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\bin\Debug\lua51.dll
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\bin\Debug\CodeGameShared.pdb
+C:\Users\Joshua\dev\org\CodeCrusade\CodeGame\obj\x86\Debug\ResolveAssemblyReference.cache

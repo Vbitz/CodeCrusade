@@ -25,7 +25,7 @@ namespace CodeGame
     {
         static void Main(string[] args)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             game.Run();
         }
     }

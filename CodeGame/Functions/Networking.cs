@@ -32,7 +32,7 @@ namespace CodeGame.Functions
 
         public static void connect(string ip)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             try
             {
                 game.client.Connect(ip, Globals.serverip);
@@ -45,7 +45,7 @@ namespace CodeGame.Functions
 
         public static void say(string msg)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             try
             {
                 NetOutgoingMessage strMsg = game.client.CreateMessage();
@@ -61,7 +61,7 @@ namespace CodeGame.Functions
 
         public static void nick(string newNick)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             try
             {
                 NetOutgoingMessage strMsg = game.client.CreateMessage();
@@ -88,7 +88,7 @@ namespace CodeGame.Functions
 
         public static void privMsg(string nick, string msg)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             try
             {
                 NetOutgoingMessage strMsg = game.client.CreateMessage();

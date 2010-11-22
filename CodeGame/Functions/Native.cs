@@ -32,14 +32,14 @@ namespace CodeGame.Functions
 
         public static void addChar(int x, int y, string nchar, int r, int g, int b)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             game.GameSpace.setCharForeground(x, y, new TCODColor(r, g, b));
             game.GameSpace.setChar(x, y, nchar.ToCharArray()[0]);
         }
 
         public static void printColorString(int x, int y, string str, int r, int g, int b)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             TCODColor currentforeground = game.GameSpace.getForegroundColor();
             game.GameSpace.setForegroundColor(new TCODColor(r, g, b));
             game.GameSpace.print(x, y, str);
@@ -48,7 +48,7 @@ namespace CodeGame.Functions
 
         public static void print(int x, int y, object str)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             try
             {
                 game.GameSpace.print(x, y, str.ToString());
@@ -61,19 +61,19 @@ namespace CodeGame.Functions
 
         public static void createFrame(int x, int y, int w, int h)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             game.GameSpace.printFrame(x, y, w, h);
         }
 
         public static void setForeground(int r, int g, int b)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             game.GameSpace.setForegroundColor(new TCODColor(r, g, b));
         }
 
         public static void fillScreen(int r, int b, int g)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             game.GameSpace.setBackgroundColor(new TCODColor(r, b, g));
             game.GameSpace.clear();
         }
@@ -85,7 +85,7 @@ namespace CodeGame.Functions
 
         public static void clear()
         {
-            Game.GetSingilton().GameSpace.clear();
+            Game.GetSingleton().GameSpace.clear();
         }
     }
 }

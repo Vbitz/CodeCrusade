@@ -30,7 +30,7 @@ namespace CodeGame.Functions
 
         public static void print(object item)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             try
             {
                 game.TConsole.WriteLine(item, libtcod.TCODColor.white);
@@ -43,12 +43,12 @@ namespace CodeGame.Functions
 
         public static void printc(object item, int r, int g, int b)
         {
-            Game.GetSingilton().WriteLine(item, new libtcod.TCODColor(r, g, b));
+            Game.GetSingleton().WriteLine(item, new libtcod.TCODColor(r, g, b));
         }
 
         public static void say(object item)
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             try
             {
                 Networking.say(item.ToString());
@@ -61,13 +61,13 @@ namespace CodeGame.Functions
 
         public static void exit()
         {
-            Game.GetSingilton().client.Disconnect("Client Exit");
+            Game.GetSingleton().client.Disconnect("Client Exit");
             Environment.Exit(0);
         }
 
         public static void history()
         {
-            Game game = Game.GetSingilton();
+            Game game = Game.GetSingleton();
             foreach (string item in game.TConsole.lastLines)
             {
                 game.TConsole.WriteLine(item);

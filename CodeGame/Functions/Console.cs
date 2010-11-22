@@ -28,7 +28,7 @@ namespace CodeGame.Functions
         public static Drawables.LuaDrawable create(int w, int h, LuaFunction draw)
         {
             Drawables.LuaDrawable drawable = new Drawables.LuaDrawable(w, h, draw, null);
-            Game.GetSingilton().AddDrawable(drawable);
+            Game.GetSingleton().AddDrawable(drawable);
             return drawable;
         }
 
