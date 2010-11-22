@@ -39,6 +39,7 @@ namespace CodeGame
         public Drawables.Console TConsole = new Drawables.Console();
         public TCODConsole GameSpace = new TCODConsole(80, 60);
         public static string playerName = "NOTHING";
+        public static string CurrentGame = "NOTHING";
 
         public Game()
         {
@@ -98,6 +99,10 @@ namespace CodeGame
                                     {
                                         game.TConsole.WriteLine(str + ":" + nMSG, TCODColor.yellow);
                                     }
+                                }
+                                else if (nick == "GAMEJOIN")
+                                {
+
                                 }
                                 else
                                 {

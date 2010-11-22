@@ -1,0 +1,43 @@
+Use the ` key to open the console and run Lua
+
+Commands
+===============
+
+* print(str) -- print a string to the console
+* printc(str, r, g, b) -- print a color string to the console
+* say(str) -- same as net.say
+* exit() -- exits the program
+* history() -- prints all previous lines
+
+* timer.create(time, function) -- Creates a new Timer to execute function after time in milliseconds
+* timer.update(time) -- do not call this, it is used by the engine to increment timers
+
+* net.connect(ip) -- connect to a ip address
+* net.say(msg) -- send a message to all players on the server
+* net.nick(nick) -- set your nickname to nick
+* net.sendLua(code, key) -- send lua to all players to execute if they registered key
+* net.privMsg(nick, msg) -- send a message to just one player
+
+* native.addChar(x, y, char, r, g, b) -- print a character to the screen with colour R, B, G
+* native.printColorString(x, y, char, r, b, g) -- same as above but print an entire string
+* native.print(x, y, str) -- print a string to the screen at location x, y
+* native.createFrame(x, y, w, h) -- print a frame onto the screen
+* native.setForeground(r, g, b) -- set the default colour to print text with
+* native.fillscreen(r, g, b) -- fill the screen with a color
+* native.getFrameTime() -- retrieve the current FPS
+* native.clear() -- removes all drawn items from the screen
+
+* hook.add(name, unique, function) -- add a new hook with hook name name
+* hook.call(name) -- call all functions with name name
+* hook.remove(unique) -- remove a hook
+
+* friend.add(key) -- registers a code allowing other people to send lua to you
+* friend.remove(key) -- revokes a key
+* friend.removeAll() -- revokes all keys
+* friend.getAll() -- returns all keys
+
+* console.create(w, h, draw) -- creates a new item that draws on the screen and returns the instance
+* console.setDraw(target, draw) -- sets the targets draw function to draw
+* console.setKeyDown(target, keydown) -- sets the target keydown function to keydown
+* console.toggleDraw(target) -- toggles visibaly of the target
+* console.print(target, x, y, str) -- prints the string on the target
