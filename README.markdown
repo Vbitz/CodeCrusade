@@ -41,3 +41,5 @@ Commands
 * console.setKeyDown(target, keydown) -- sets the target keydown function to keydown
 * console.toggleDraw(target) -- toggles visibaly of the target
 * console.print(target, x, y, str) -- prints the string on the target
+
+* game.join(gamename) -- join a game and displays the map
