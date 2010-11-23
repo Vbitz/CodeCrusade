@@ -28,6 +28,7 @@ namespace CodeGameServer
     {
         static List<Player> Connections = new List<Player>();
         static NetServer server;
+        static List<Game> Games = new List<Game>();
 
         static void Main(string[] args)
         {
@@ -90,6 +91,24 @@ namespace CodeGameServer
                                         server.SendMessage(msg3, conn, NetDeliveryMethod.ReliableOrdered, 0);
                                     }
                                     break;
+                                case "JOIN":
+                                    string game = netStr.Substring(5);
+                                    Player gamePlayer = GetPlayer(msg.SenderConnection);
+                                    string pnick = gamePlayer.Name;
+                                    WriteLine(pnick + " Joining : " + game);
+                                    NetOutgoingMessage msg4 = server.CreateMessage();
+                                    msg4.Write("GAMEJOIN");
+                                    Game playerGame = GetGame(game);
+                                    if (playerGame == null)
+                                    {
+                                        playerGame = new Game(game);
+                                        Games.Add(playerGame);
+                                    }
+                                    msg4.Write(game);
+                                    playerGame.Players.Add(gamePlayer);
+                                    playerGame.CurrentMap.GenerateMapPacket(msg4);
+                                    server.SendMessage(msg4, msg.SenderConnection, NetDeliveryMethod.ReliableOrdered, 0);
+                                    break;
                                 default:
                                     NetOutgoingMessage msg2 = server.CreateMessage();
                                     msg2.Write("[Server] : Server Command not Found, You Wrote : " + netStr);
@@ -114,6 +133,18 @@ namespace CodeGameServer
                 }
                 Thread.Sleep(10);
             }
+        }
+
+        public static Game GetGame(string name)
+        {
+            foreach (Game item in Games)
+            {
+                if (item.Name == name)
+                {
+                    return item;
+                }
+            }
+            return null;
         }
 
         private static void ReadStatus(NetIncomingMessage msg)

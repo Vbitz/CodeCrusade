@@ -40,6 +40,8 @@ namespace CodeGame
         public TCODConsole GameSpace = new TCODConsole(80, 60);
         public static string playerName = "NOTHING";
         public static string CurrentGame = "NOTHING";
+        public Map CurrentMap;
+        Drawables.GameMap GameMap = new Drawables.GameMap();
 
         public Game()
         {
@@ -102,7 +104,11 @@ namespace CodeGame
                                 }
                                 else if (nick == "GAMEJOIN")
                                 {
-
+                                    CurrentGame = str;
+                                    game.TConsole.WriteLine("Getting Map");
+                                    game.CurrentMap = new Map();
+                                    game.CurrentMap.Load(msg.ReadBytes(2500));
+                                    game.GameMap.active = true;
                                 }
                                 else
                                 {
@@ -206,6 +212,10 @@ namespace CodeGame
                     Drawables.Add(item);
                 }
                 DrawableCue.Clear();
+            }
+            if (GameMap.active)
+            {
+                GameMap.Draw(TCODConsole.root);
             }
             TConsole.Draw(TCODConsole.root);
             TConsole.KeyPress(key);

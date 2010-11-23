@@ -55,9 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drawables\Console.cs" />
+    <Compile Include="Drawables\GameMap.cs" />
     <Compile Include="Drawables\LuaDrawable.cs" />
     <Compile Include="Functions\Console.cs" />
     <Compile Include="Functions\Friend.cs" />
+    <Compile Include="Functions\Game.cs" />
     <Compile Include="Functions\Hook.cs" />
     <Compile Include="Functions\Native.cs" />
     <Compile Include="Functions\Networking.cs" />
