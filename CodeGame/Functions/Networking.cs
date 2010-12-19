@@ -20,6 +20,7 @@ using System.Linq;
 using System.Text;
 using CodeGameShared;
 using Lidgren.Network;
+using System.Net;
 
 namespace CodeGame.Functions
 {
@@ -100,6 +101,16 @@ namespace CodeGame.Functions
                 Utility.WriteLogLine(ex.Message, "engine");
                 throw;
             }
+        }
+
+        public static string getPastebin(string id)
+        {
+            WebClient client = new WebClient();
+            string str = client.DownloadString("http://pastebin.com/raw.php?i=" + id);
+            int startindex = str.IndexOf("<pre>") + 5;
+            int endindex = str.IndexOf("</pre>");
+            str = str.Substring(startindex, endindex - startindex);
+            return str;
         }
     }
 }
