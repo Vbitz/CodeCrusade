@@ -26,11 +26,13 @@ namespace CodeGameShared
     {
         public string Name;
         public NetConnection Connection;
+        public int Resources;
 
         public Player(string name, NetConnection conn)
         {
             Name = name;
             Connection = conn;
+            Resources = 0;
         }
     }
 }

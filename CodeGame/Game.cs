@@ -41,6 +41,7 @@ namespace CodeGame
         public static string playerName = "NOTHING";
         public static string CurrentGame = "NOTHING";
         public Map CurrentMap;
+        public int PlayerResources = 0;
         Drawables.GameMap GameMap = new Drawables.GameMap();
 
         public Game()
@@ -109,6 +110,11 @@ namespace CodeGame
                                     game.CurrentMap = new Map();
                                     game.CurrentMap.Load(msg.ReadBytes(2500));
                                     game.GameMap.active = true;
+                                    game.PlayerResources = 10000;
+                                }
+                                else if (nick == "GAMERES")
+                                {
+                                    game.PlayerResources = int.Parse(str);
                                 }
                                 else
                                 {

@@ -15,7 +15,27 @@ namespace CodeGameShared
         public Game(string name)
         {
             this.Name = name;
-            CurrentMap.Generate();
+            this.CurrentMap.Generate();
+        }
+
+        public void UpdateAllResources(NetServer server)
+        {
+            foreach (Player item in this.Players)
+            {
+                this.UpdateResource(server, item);
+            }
+        }
+
+        public void UpdateResource(NetServer server, Player ply)
+        {
+            try
+            {
+                NetOutgoingMessage msg = server.CreateMessage();
+                msg.Write("GAMERES");
+                msg.Write(ply.Resources.ToString());
+                ply.Connection.SendMessage(msg, NetDeliveryMethod.ReliableOrdered);
+            }
+            catch (Exception) { }
         }
     }
 }

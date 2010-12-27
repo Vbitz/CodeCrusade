@@ -107,6 +107,7 @@ namespace CodeGameServer
                                     msg4.Write(game);
                                     playerGame.Players.Add(gamePlayer);
                                     playerGame.CurrentMap.GenerateMapPacket(msg4);
+                                    gamePlayer.Resources = 10000;
                                     server.SendMessage(msg4, msg.SenderConnection, NetDeliveryMethod.ReliableOrdered, 0);
                                     break;
                                 default:
